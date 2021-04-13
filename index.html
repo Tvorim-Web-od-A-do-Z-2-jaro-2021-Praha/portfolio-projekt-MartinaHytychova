@@ -4,16 +4,262 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Portfolio</title>
   </head>
   <body>
-    <div>
-      <h1>Portfolio</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        tempora fugit error fuga nam itaque nisi, saepe sed iste aperiam atque
-        minima consectetur quidem. Nihil dicta praesentium fuga cumque deserunt.
-      </p>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">profile</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">story</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">projects</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">references</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="profile">
+      <div class="profile__photo-wrapper">
+        <img
+          width="126px"
+          height="126px"
+          src="./img/foto.png"
+          alt="osobní foto"
+          class="profile__photo"
+        />
+      </div>
+      <div class="profile__info">
+        <h1 class="profile__name">Martina Hytychová</h1>
+        <p class="profile__position">Programmer, Webdesigner</p>
+      </div>
+      <div class="profile__icons">
+        <span class="profile__icon profile__icon--light-blue">Li</span>
+        <span class="profile__icon profile__icon--dark-blue">Fb</span>
+        <span class="profile__icon profile__icon--black">Git</span>
+      </div>
     </div>
+    <section class="about">
+      <h2 class="about__title">Story</h2>
+      <p class="about__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel, nisi
+        facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+        voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+        modi odio!
+      </p>
+      <p class="about__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel, nisi
+        facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+        voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+        modi odio!
+      </p>
+    </section>
+    <section class="skills">
+      <h2 class="skills__title">Skills</h2>
+      <div class="skills__items">
+        <div class="skills__item">
+          <span class="skills__icon skills__icon--blue">i</span>
+          <h3 class="skills__subtitle">Skills</h3>
+          <p class="skills__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel,
+            nisi facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+            voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+            modi odio!
+          </p>
+          <div class="skills__graph skills__graph--blue">
+            <progress value="68" max="100"></progress>
+          </div>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon skills__icon--orange">i</span>
+          <h3 class="skills__subtitle">Skills</h3>
+          <p class="skills__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel,
+            nisi facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+            voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+            modi odio!
+          </p>
+          <div class="skills__graph skills__graph--orange">
+            <progress value="32" max="100"></progress>
+          </div>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon skills__icon--yellow">i</span>
+          <h3 class="skills__subtitle">Skills</h3>
+          <p class="skills__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel,
+            nisi facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+            voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+            modi odio!
+          </p>
+          <div class="skills__graph skills__graph--yellow">
+            <progress value="55" max="100"></progress>
+          </div>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon skills__icon--purple">i</span>
+          <h3 class="skills__subtitle">Skills</h3>
+          <p class="skills__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel,
+            nisi facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+            voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+            modi odio!
+          </p>
+          <div class="skills__graph skills__graph--purple">
+            <progress value="76" max="100"></progress>
+          </div>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon skills__icon--red">i</span>
+          <h3 class="skills__subtitle">Skills</h3>
+          <p class="skills__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel,
+            nisi facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+            voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+            modi odio!
+          </p>
+          <div class="skills__graph skills__graph--red">
+            <progress value="40" max="100"></progress>
+          </div>
+        </div>
+        <div class="skills__item">
+          <span class="skills__icon skills__icon--green">i</span>
+          <h3 class="skills__subtitle">Skills</h3>
+          <p class="skills__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel,
+            nisi facilis nemo saepe fuga beatae iste? Provident voluptatibus ab
+            voluptatum nemo eos. Recusandae eligendi quae reprehenderit suscipit
+            modi odio!
+          </p>
+          <div class="skills__graph skills__graph--green">
+            <progress value="90" max="100"></progress>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <h2 class="projects__title">Projects</h2>
+      <div class="projects__cards">
+        <div class="projects__card">
+          <div class="projects__image-wrapper">
+            <img
+              src="./img/pet.png"
+              alt="project 1"
+              width="260px"
+              height="140px"
+              class="projects__image"
+            />
+          </div>
+          <div class="projects__info">
+            <p class="projects__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Exercitationem eius similique veritatis non ad. Adipisci similique
+              doloribus dignissimos quo, hic iste tempore repudiandae ab
+              doloremque cumque aliquam harum sunt numquam!
+            </p>
+            <span class="projects__link-btn"
+              ><a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                class="projects__link"
+                >Project 1</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="projects__card">
+          <div class="projects__image-wrapper">
+            <img
+              src="./img/pokemon.png"
+              alt="project 2"
+              width="260px"
+              height="140px"
+              class="projects__image"
+            />
+          </div>
+          <div class="projects__info">
+            <p class="projects__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Exercitationem eius similique veritatis non ad. Adipisci similique
+              doloribus dignissimos quo, hic iste tempore repudiandae ab
+              doloremque cumque aliquam harum sunt numquam!
+            </p>
+            <span class="projects__link-btn">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                class="projects__link"
+                >Project 2</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="projects__card">
+          <div class="projects__image-wrapper">
+            <img
+              src="./img/travel.png"
+              alt="project 3"
+              width="260px"
+              height="140px"
+              class="projects__image"
+            />
+          </div>
+          <div class="projects__info">
+            <p class="projects__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Exercitationem eius similique veritatis non ad. Adipisci similique
+              doloribus dignissimos quo, hic iste tempore repudiandae ab
+              doloremque cumque aliquam harum sunt numquam!
+            </p>
+            <span class="projects__link-btn">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                class="projects__link"
+                >Project 3</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reference">
+      <h2 class="reference__title">References</h2>
+      <div class="reference__item">
+        <p class="reference__text">
+          <em
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            reprehenderit quibusdam esse consectetur harum optio molestiae saepe
+            debitis sint sapiente quo, impeditaccusamus! Adipisci, porro. Porro
+            assumenda itaque veritatis fugit.</em
+          >
+        </p>
+      </div>
+    </section>
+    <section class="contact">
+      <h2 class="contact__title">Contact</h2>
+      <address class="contact__address">
+        Pálená 33<br />
+        100 00<br />
+        Praha
+      </address>
+    </section>
+    <footer class="footer">Copyright Martina Hytychová 2021</footer>
   </body>
 </html>
