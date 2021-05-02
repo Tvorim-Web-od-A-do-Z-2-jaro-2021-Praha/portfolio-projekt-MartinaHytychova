@@ -1,0 +1,425 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './mixins.scss';
+
+body {
+  margin: 0;
+  background-color: $background-base;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 1.2;
+  color: $black;
+  height: 100vh;
+  @include flex(flex, column);
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAVIGATION */
+
+.navigation {
+  @include flex(flex, row);
+  margin: 20px 0 200px;
+
+  &__list {
+    @include grid(grid, repeat(2, 1fr), repeat(3, 1fr), 8px);
+    list-style: none;
+  }
+
+  &__item {
+    width: 70px;
+    padding: 10px;
+    transition: all 0.2s ease;
+    border: 0.5px solid $background-base;
+    box-shadow: 3px 3px 6px $gray, -3px -3px 6px $white;
+    border-radius: 0.55rem;
+  }
+
+  &__item:hover {
+    border: 0.5px solid $background-base;
+    box-shadow: inset 2px 2px 5px $gray, inset -3px -3px 7px $white;
+  }
+
+  &__link {
+    @include flex(flex, row);
+    justify-content: center;
+    text-decoration: none;
+    color: $black;
+  }
+}
+/* PROFILE */
+
+.profile {
+  height: 25rem;
+  width: 70%;
+  margin-bottom: 50px;
+  @include flex(flex, column);
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 20px 60px;
+  border-radius: 0.55rem;
+  position: relative;
+  border: 0.5px solid $background-base;
+  box-shadow: 6px 6px 12px $gray, -6px -6px 12px $white;
+  background-color: $background-base;
+
+  &__photo-wrapper {
+    position: absolute;
+    top: -80px;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.55rem;
+    padding: 1rem;
+    border: 0.5px solid $background-base;
+    box-shadow: inset 2px 2px 5px $gray, inset -3px -3px 7px $white;
+    background-color: $background-base;
+  }
+
+  &__photo {
+    border-radius: 0.55rem;
+    width: 100%;
+    height: auto;
+  }
+
+  &__info {
+    margin: 90px 0 60px;
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+  }
+
+  &__icons {
+    @include grid(grid, 1, repeat(3, minmax(50px, 1fr)), 0);
+    justify-items: center;
+  }
+
+  &__icon {
+    cursor: pointer;
+    @include flex(flex, row);
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    /*border: 0.5px solid $light-gray;*/
+    box-shadow: 3px 3px 6px $gray, -3px -3px 6px $white;
+  }
+
+  &__icon {
+    &--light-blue {
+      border: 0.5px solid #1d84e2;
+    }
+  }
+
+  &__icon {
+    &--dark-blue {
+      border: 0.5px solid #5163e4;
+    }
+  }
+
+  &__icon {
+    &--black {
+      border: 0.5px solid #000000;
+    }
+  }
+
+  &__icon:hover {
+    border: 0.5px solid $background-base;
+    box-shadow: inset 2px 2px 5px $gray, inset -3px -3px 7px $white;
+  }
+}
+
+/* ABOUT */
+
+.about {
+  @include flex(flex, column);
+  width: 80%;
+  padding: 20px;
+  margin-bottom: 50px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* SKILLS */
+
+.skills {
+  max-width: 990px;
+  padding: 30px;
+  margin-bottom: 50px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin: 10px;
+  }
+
+  &__icon {
+    @include flex(flex, row);
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    /*border: 0.5px solid $light-gray;*/
+    box-shadow: 3px 3px 6px $gray, -3px -3px 6px $white;
+  }
+
+  &__icon {
+    &--blue {
+      border: 0.5px solid $blue;
+    }
+  }
+
+  &__icon {
+    &--red {
+      border: 0.5px solid $red;
+    }
+  }
+
+  &__icon {
+    &--green {
+      border: 0.5px solid $green;
+    }
+  }
+
+  &__icon {
+    &--yellow {
+      border: 0.5px solid $yellow;
+    }
+  }
+
+  &__icon {
+    &--purple {
+      border: 0.5px solid $purple;
+    }
+  }
+
+  &__icon {
+    &--orange {
+      border: 0.5px solid $orange;
+    }
+  }
+
+  &__items {
+    @include grid(grid, 1, repeat(auto-fill, minmax(250px, 1fr)), 16px);
+  }
+
+  &__item {
+    position: relative;
+    @include flex(flex, column);
+    align-items: center;
+  }
+  &__graph {
+    margin: 10px 0 20px;
+  }
+
+  &__graph {
+    &--blue progress[value]::-webkit-progress-value {
+      background-color: $blue;
+    }
+  }
+
+  &__graph {
+    &--orange progress[value]::-webkit-progress-value {
+      background-color: $orange;
+    }
+  }
+
+  &__graph {
+    &--yellow progress[value]::-webkit-progress-value {
+      background-color: $yellow;
+    }
+  }
+
+  &__graph {
+    &--purple progress[value]::-webkit-progress-value {
+      background-color: $purple;
+    }
+  }
+
+  &__graph {
+    &--red progress[value]::-webkit-progress-value {
+      background-color: $red;
+    }
+  }
+
+  &__graph {
+    &--green progress[value]::-webkit-progress-value {
+      background-color: $green;
+    }
+  }
+}
+
+/* PROGRESS BAR */
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 12px;
+}
+
+progress[value]::-webkit-progress-bar {
+  border-radius: 10px;
+  background-color: $background-base;
+  border: 0.5px solid $background-base;
+  box-shadow: inset 5px 5px 9px #c8c9cf, inset -5px -5px 9px $white;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 10px;
+}
+
+/* PROJECTS */
+
+.projects {
+  @include flex(flex, column);
+  width: 70%;
+  padding: 20px;
+  margin-bottom: 50px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__cards {
+    @include grid(grid, 1, repeat(auto-fill, minmax(290px, 1fr)), 32px);
+    justify-content: center;
+    justify-items: center;
+  }
+
+  &__card {
+    padding: 35px 25px;
+    @include flex(flex, column);
+    align-items: center;
+    width: 80%;
+    border-radius: 0.55rem;
+    background-color: $background-base;
+    border: 0.5px solid $background-base;
+    box-shadow: 3px 3px 6px $gray, -3px -3px 6px $white;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    border-radius: 0.55rem;
+    width: 100%;
+  }
+
+  &__info {
+    @include flex(flex, column);
+    align-items: center;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+  }
+
+  &__link-btn {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    cursor: pointer;
+    color: $black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 0.55rem;
+    transition: all 0.2s ease;
+    background-color: $background-base;
+    border: 0.5px solid $background-base;
+    box-shadow: 3px 3px 6px $gray, -3px -3px 6px $white;
+  }
+
+  &__link:hover {
+    border: 0.5px solid $background-base;
+    box-shadow: inset 2px 2px 5px $gray, inset -3px -3px 7px $white;
+  }
+}
+
+/* REFERENCE */
+
+.reference {
+  @include flex(flex, column);
+  width: 80%;
+  padding: 20px;
+  margin-bottom: 100px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/* CONTACT */
+
+.contact {
+  width: 500px;
+  padding: 20px;
+  margin-bottom: 100px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__address {
+    text-align: center;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 550px) {
+    .navigation__list {
+      @include grid(grid, 1fr, repeat(5, 1fr), 16px);
+    }
+    .profile {
+      width: 20rem;
+    }
+    .profile__photo-wrapper {
+      width: 8rem;
+      height: 8rem;
+    }
+    .about {
+      width: 500px;
+    }
+    .projects__card {
+      width: 270px;
+    }
+    .profile,
+    .about,
+    .projects,
+    .skills,
+    .reference {
+      margin-bottom: 100px;
+    }
+    .reference {
+      width: 500px;
+    }
+  }
+}
