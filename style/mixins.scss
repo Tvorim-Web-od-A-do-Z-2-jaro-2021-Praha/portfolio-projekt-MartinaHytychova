@@ -1,0 +1,13 @@
+/* GRID */
+@mixin grid($grid, $grid-rows, $grid-columns, $grid-gap) {
+  display: $grid;
+  grid-template-rows: $grid-rows;
+  grid-template-columns: $grid-columns;
+  grid-gap: $grid-gap;
+}
+
+/*  FLEX */
+@mixin flex($flex, $direction) {
+  display: $flex;
+  flex-direction: $direction;
+}
