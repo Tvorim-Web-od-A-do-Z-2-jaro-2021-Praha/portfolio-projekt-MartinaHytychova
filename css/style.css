@@ -77,13 +77,13 @@ select {
 /*  FLEX */
 body {
   margin: 0;
+  padding: 10px;
   background-color: #e6e7ee;
   font-family: "Nunito", sans-serif;
   font-size: 1em;
   font-weight: 100;
   line-height: 1.2;
   color: #333338;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,7 +104,7 @@ body {
   list-style: none;
 }
 .navigation__item {
-  width: 70px;
+  width: 5.5rem;
   padding: 10px;
   transition: all 0.2s ease;
   border: 0.5px solid #e6e7ee;
@@ -175,11 +175,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   transition: all 0.2s ease;
-  /*border: 0.5px solid $light-gray;*/
   box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
 }
 .profile__icon--light-blue {
@@ -231,8 +230,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   transition: all 0.2s ease;
   /*border: 0.5px solid $light-gray;*/
@@ -294,8 +293,8 @@ body {
 progress[value] {
   -webkit-appearance: none;
   appearance: none;
-  width: 100px;
-  height: 12px;
+  width: 6rem;
+  height: 0.8rem;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -334,7 +333,7 @@ progress[value]::-webkit-progress-value {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 100%;
   border-radius: 0.55rem;
   background-color: #e6e7ee;
   border: 0.5px solid #e6e7ee;
@@ -393,8 +392,11 @@ progress[value]::-webkit-progress-value {
   width: 500px;
   padding: 20px;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* FOOTER */
-  /* DESKTOP */
 }
 .contact__title {
   text-align: center;
@@ -402,39 +404,83 @@ progress[value]::-webkit-progress-value {
 }
 .contact__address {
   text-align: center;
+  margin-top: 10px;
 }
 .contact .footer {
   padding: 30px 0;
 }
-@media (min-width: 550px) {
-  .contact .navigation__list {
+
+/* DESKTOP */
+@media only screen and (min-width: 550px) {
+  .navigation__list {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 16px;
   }
-  .contact .profile {
+
+  .profile {
     width: 20rem;
   }
-  .contact .profile__photo-wrapper {
+  .profile__photo-wrapper {
     width: 8rem;
     height: 8rem;
   }
-  .contact .about {
+
+  .about {
     width: 500px;
   }
-  .contact .projects__card {
+
+  .projects__card {
     width: 270px;
   }
-  .contact .profile,
-.contact .about,
-.contact .projects,
-.contact .skills,
-.contact .reference {
+
+  .profile,
+.about,
+.projects,
+.skills,
+.reference {
     margin-bottom: 100px;
   }
-  .contact .reference {
+
+  .reference {
     width: 500px;
+  }
+}
+/* ANIMATION */
+.shake {
+  margin-right: 10px;
+  animation: shake 0.3s ease 1s 3;
+}
+
+.move-out {
+  margin-right: 10px;
+  animation: move-out 1s ease 0s 1;
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
