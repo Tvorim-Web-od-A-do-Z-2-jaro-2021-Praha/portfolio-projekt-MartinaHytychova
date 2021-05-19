@@ -4,13 +4,13 @@
 
 body {
   margin: 0;
+  padding: 10px;
   background-color: $background-base;
   font-family: 'Nunito', sans-serif;
   font-size: 1em;
   font-weight: 100;
   line-height: 1.2;
   color: $black;
-  height: 100vh;
   @include flex(flex, column);
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@ body {
   }
 
   &__item {
-    width: 70px;
+    width: 5.5rem;
     padding: 10px;
     transition: all 0.2s ease;
     border: 0.5px solid $background-base;
@@ -101,11 +101,10 @@ body {
     @include flex(flex, row);
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     transition: all 0.2s ease;
-    /*border: 0.5px solid $light-gray;*/
     box-shadow: 3px 3px 6px $gray, -3px -3px 6px $white;
   }
 
@@ -172,8 +171,8 @@ body {
     @include flex(flex, row);
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     transition: all 0.2s ease;
     /*border: 0.5px solid $light-gray;*/
@@ -271,8 +270,8 @@ body {
 progress[value] {
   -webkit-appearance: none;
   appearance: none;
-  width: 100px;
-  height: 12px;
+  width: 6rem;
+  height: 0.8rem;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -309,7 +308,7 @@ progress[value]::-webkit-progress-value {
     padding: 35px 25px;
     @include flex(flex, column);
     align-items: center;
-    width: 80%;
+    width: 100%;
     border-radius: 0.55rem;
     background-color: $background-base;
     border: 0.5px solid $background-base;
@@ -377,6 +376,10 @@ progress[value]::-webkit-progress-value {
   width: 500px;
   padding: 20px;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__title {
     text-align: center;
@@ -385,6 +388,7 @@ progress[value]::-webkit-progress-value {
 
   &__address {
     text-align: center;
+    margin-top: 10px;
   }
 
   /* FOOTER */
@@ -392,34 +396,75 @@ progress[value]::-webkit-progress-value {
   .footer {
     padding: 30px 0;
   }
-
-  /* DESKTOP */
-  @media (min-width: 550px) {
-    .navigation__list {
+}
+/* DESKTOP */
+@media only screen and (min-width: 550px) {
+  .navigation {
+    &__list {
       @include grid(grid, 1fr, repeat(5, 1fr), 16px);
     }
-    .profile {
-      width: 20rem;
-    }
-    .profile__photo-wrapper {
+  }
+  .profile {
+    width: 20rem;
+    &__photo-wrapper {
       width: 8rem;
       height: 8rem;
     }
-    .about {
-      width: 500px;
-    }
-    .projects__card {
+  }
+  .about {
+    width: 500px;
+  }
+  .projects {
+    &__card {
       width: 270px;
     }
-    .profile,
-    .about,
-    .projects,
-    .skills,
-    .reference {
-      margin-bottom: 100px;
-    }
-    .reference {
-      width: 500px;
-    }
+  }
+  .profile,
+  .about,
+  .projects,
+  .skills,
+  .reference {
+    margin-bottom: 100px;
+  }
+  .reference {
+    width: 500px;
+  }
+}
+
+/* ANIMATION */
+.shake {
+  margin-right: 10px;
+  animation: shake 0.3s ease 1s 3;
+}
+
+.move-out {
+  margin-right: 10px;
+  animation: move-out 1s ease 0s 1;
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes move-out {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
